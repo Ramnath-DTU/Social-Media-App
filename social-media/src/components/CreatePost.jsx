@@ -1,6 +1,34 @@
+import { useContext, useRef } from "react";
+import { PostList } from "../store/post-list-store";
+
 const CreatePost = () => {
+  const { addPost } = useContext(PostList);
+
+  const userIdElement = useRef();
+  const postTitleElement = useRef();
+  const postBodyElement = useRef();
+  const reactionsElement = useRef();
+  const tagsElement = useRef();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const userId = userIdElement.current.value;
+    const postTitle = postTitleElement.current.value;
+    const postBody = postBodyElement.current.value;
+    const reactions = reactionsElement.current.value;
+    const tags = tagsElement.current.value.split(" ").filter(tag => tag.trim() !== ""); 
+
+    userIdElement.current.value = "";
+    postTitleElement.current.value = "";
+    postBodyElement.current.value = "";
+    reactionsElement.current.value = "";
+    tagsElement.current.value = ""
+    
+    addPost(userId, postTitle, postBody, reactions, tags);
+  }
+
   return (
-    <form className="create-post">
+    <form className="create-post" onSubmit={handleSubmit}>
 
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
@@ -8,6 +36,7 @@ const CreatePost = () => {
         </label>
         <input
           type="text"
+          ref={userIdElement}
           className="form-control"
           id="userId" placeholder="Your User Id"
         />
@@ -19,6 +48,7 @@ const CreatePost = () => {
         </label>
         <input
           type="text"
+          ref={postTitleElement}
           className="form-control"
           id="title" placeholder="How are you feeling today..."
         />
@@ -30,6 +60,7 @@ const CreatePost = () => {
         </label>
         <textarea
           type="text"
+          ref={postBodyElement}
           rows="4"
           className="form-control"
           id="body" placeholder="Tell us more about it"
@@ -42,6 +73,7 @@ const CreatePost = () => {
         </label>
         <input
           type="text"
+          ref={reactionsElement}
           className="form-control"
           id="reactions" placeholder="How many people reacted to this post"
         />
@@ -53,6 +85,7 @@ const CreatePost = () => {
         </label>
         <input
           type="text"
+          ref={tagsElement}
           className="form-control"
           id="tags" placeholder="Please enter tags using space"
         />
