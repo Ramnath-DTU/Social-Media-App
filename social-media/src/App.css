@@ -1,3 +1,8 @@
+body{
+  margin-top: 0px;
+  margin-bottom: 0px; 
+}
+
 .app-container {
   display: flex;
 }
@@ -7,7 +12,7 @@
 }
 
 .sidebar {
-  min-height: 800px;
+  min-height: 100vh;
 }
 
 .post-card {
@@ -27,3 +32,11 @@
   margin-top: 50px;
   margin-left: 10%;
 }
+
+.welcome-message {
+  margin: 100px 0;
+}
+
+
+
+  

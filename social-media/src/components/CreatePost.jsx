@@ -16,20 +16,24 @@ const CreatePost = () => {
     const postTitle = postTitleElement.current.value;
     const postBody = postBodyElement.current.value;
     const reactions = reactionsElement.current.value;
-    const tags = tagsElement.current.value.split(" ").filter(tag => tag.trim() !== ""); 
+    const tags = tagsElement.current.value.split(" ");
 
+    if (!userId || !postTitle || !postBody || !reactions || tags.length === 0 || tags.every(tag => tag === "")) {
+    alert("All fields are required. Please complete the post before submitting.");
+    return;
+  }
+    // Clear the input fields after submission
     userIdElement.current.value = "";
     postTitleElement.current.value = "";
     postBodyElement.current.value = "";
     reactionsElement.current.value = "";
-    tagsElement.current.value = ""
-    
+    tagsElement.current.value = "";
+
     addPost(userId, postTitle, postBody, reactions, tags);
-  }
+  };
 
   return (
     <form className="create-post" onSubmit={handleSubmit}>
-
       <div className="mb-3">
         <label htmlFor="userId" className="form-label">
           Enter your User Id here
@@ -38,7 +42,8 @@ const CreatePost = () => {
           type="text"
           ref={userIdElement}
           className="form-control"
-          id="userId" placeholder="Your User Id"
+          id="userId"
+          placeholder="Your User Id"
         />
       </div>
 
@@ -50,7 +55,8 @@ const CreatePost = () => {
           type="text"
           ref={postTitleElement}
           className="form-control"
-          id="title" placeholder="How are you feeling today..."
+          id="title"
+          placeholder="How are you feeling today..."
         />
       </div>
 
@@ -63,7 +69,8 @@ const CreatePost = () => {
           ref={postBodyElement}
           rows="4"
           className="form-control"
-          id="body" placeholder="Tell us more about it"
+          id="body"
+          placeholder="Tell us more about it"
         />
       </div>
 
@@ -75,7 +82,8 @@ const CreatePost = () => {
           type="text"
           ref={reactionsElement}
           className="form-control"
-          id="reactions" placeholder="How many people reacted to this post"
+          id="reactions"
+          placeholder="How many people reacted to this post"
         />
       </div>
 
@@ -87,7 +95,8 @@ const CreatePost = () => {
           type="text"
           ref={tagsElement}
           className="form-control"
-          id="tags" placeholder="Please enter tags using space"
+          id="tags"
+          placeholder="Please enter tags using space"
         />
       </div>
 
