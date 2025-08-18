@@ -7,9 +7,7 @@ const PostList = () => {
   const { postList } = useContext(PostListData);
   return (
     <>
-      {postList.length === 0 && (
-        <WelcomeMessage />
-      )}
+      {postList.length === 0 && <WelcomeMessage />}
       {postList.map((post) => (
         <Post key={post.id} post={post} />
       ))}

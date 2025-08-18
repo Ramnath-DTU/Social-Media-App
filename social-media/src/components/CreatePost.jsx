@@ -18,10 +18,19 @@ const CreatePost = () => {
     const reactions = reactionsElement.current.value;
     const tags = tagsElement.current.value.split(" ");
 
-    if (!userId || !postTitle || !postBody || !reactions || tags.length === 0 || tags.every(tag => tag === "")) {
-    alert("All fields are required. Please complete the post before submitting.");
-    return;
-  }
+    if (
+      !userId ||
+      !postTitle ||
+      !postBody ||
+      !reactions ||
+      tags.length === 0 ||
+      tags.every((tag) => tag === "")
+    ) {
+      alert(
+        "All fields are required. Please complete the post before submitting."
+      );
+      return;
+    }
     // Clear the input fields after submission
     userIdElement.current.value = "";
     postTitleElement.current.value = "";
