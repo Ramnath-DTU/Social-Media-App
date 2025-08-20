@@ -32,8 +32,9 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
           {" "}
           <a
             href="#"
-            className={`nav-link text-white ${selectedTab === "Home" && "active"
-              }`}
+            className={`nav-link text-white ${
+              selectedTab === "Home" && "active"
+            }`}
             aria-current="page"
           >
             {" "}
@@ -56,8 +57,9 @@ const Sidebar = ({ selectedTab, setSelectedTab }) => {
           {" "}
           <a
             href="#"
-            className={`nav-link text-white ${selectedTab === "Create Post" && "active"
-              }`}
+            className={`nav-link text-white ${
+              selectedTab === "Create Post" && "active"
+            }`}
           >
             {" "}
             <svg
