@@ -33,16 +33,6 @@ Built with **React Hooks** (`useReducer`, `useCallback`) and **Context API** for
 
 ---
 
-## 📸 Screenshots  
-
-| Home Page | Create Post | Delete Post |
-|-----------|-------------|-------------|
-| ![Home](#) | ![CreatePost](#) | ![DeletePost](#) |
-
-*(Replace `#` with screenshot URLs of your app once available)*  
-
----
-
 ## 📂 Project Structure  
 
 <br>src/</br>
