@@ -45,19 +45,19 @@ Built with **React Hooks** (`useReducer`, `useCallback`) and **Context API** for
 
 ## 📂 Project Structure  
 
-src/
- ├── components/
- │    ├── Header.js
- │    ├── Sidebar.js
- │    ├── Footer.js
- │    ├── PostList.js
- │    ├── AddPost.js
- │    └── PostItem.js
- ├── context/
- │    └── PostContext.js
- ├── App.js
- ├── index.js
- └── styles.css
+<br>src/</br>
+ <br>├── components/</br>
+ <br>│    ├── Header.js</br>
+ <br>│    ├── Sidebar.js</br>
+<br> │    ├── Footer.js</br>
+ <br>│    ├── PostList.js</br>
+ <br>│    ├── AddPost.js</br>
+<br> │    └── PostItem.js</br>
+ <br>├── context/</br>
+ <br>│    └── PostContext.js</br>
+ <br>├── App.js</br>
+<br> ├── index.js</br>
+<br> └── styles.css</br>
 
 
 ---
