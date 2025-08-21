@@ -45,3 +45,60 @@ Built with **React Hooks** (`useReducer`, `useCallback`) and **Context API** for
 
 ## 📂 Project Structure  
 
+src/
+ ├── components/
+ │    ├── Header.js
+ │    ├── Sidebar.js
+ │    ├── Footer.js
+ │    ├── PostList.js
+ │    ├── AddPost.js
+ │    └── PostItem.js
+ ├── context/
+ │    └── PostContext.js
+ ├── App.js
+ ├── index.js
+ └── styles.css
+
+
+---
+
+## ⚡ Getting Started  
+
+1. **Clone the repo:**
+
+   git clone https://github.com/Ramnath-DTU/Social-Media-App.git
+ 
+2. **Install dependencies:**
+
+   npm install
+
+
+3. **Start the development server:**
+
+   npm run dev
+
+---
+
+## 📖 Commit History Highlights  
+
+- 📰 *Create Post UI*  
+- ➕ *Interactive Add Post*  
+- ❌ *Interactive Delete Post*  
+- 🏠 *Home & Create Post Tabs*  
+- 🎨 *Header, Sidebar, Footer layout*  
+- ⚙️ *Context API with useReducer*  
+- 🛑 *Validation: empty posts restricted*  
+- ⚡ *Performance boost with useCallback*  
+
+---
+
+## 🙌 Author  
+
+👨‍💻 **Ramnath**  
+📧 [ramnath2544@gmail.com](mailto:ramnath2544@gmail.com)  
+ 
+
+
+
+
+
